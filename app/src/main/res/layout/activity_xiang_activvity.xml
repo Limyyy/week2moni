@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--内容区-->
+        <lqy.bwie.com.myappone.weight.MyScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <!--帧布局-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--头部信息栏-->
+                    <LinearLayout
+                        android:id="@+id/layout_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical">
+
+                        <!--商品详情轮播图-->
+                        <com.youth.banner.Banner
+                            android:id="@+id/product_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="410dp">
+
+                            <ImageView
+                                android:id="@+id/img_spxq"
+                                android:layout_width="match_parent"
+                                android:layout_height="450dp"
+                                android:layout_marginTop="10dp" />
+                        </com.youth.banner.Banner>
+
+                        <!--商品描述信息-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingEnd="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingStart="10dp">
+
+                                <TextView
+                                    android:id="@+id/tv_current_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginStart="5dp"
+                                    android:text="@string/current_price"
+                                    android:textColor="@color/colorTitle"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_old_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginStart="2dp"
+                                    android:gravity="bottom"
+                                    android:padding="3dp"
+                                    android:textColor="#D23b3b"
+                                    android:textSize="16sp" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/tv_saleNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:text="已售:10"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+                            <!--标题-->
+                            <TextView
+                                android:id="@+id/tv_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|start"
+                                android:paddingBottom="5dp"
+                                android:paddingEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingStart="15dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/product_title"
+                                android:textColor="#333333"
+                                android:textSize="17sp" />
+
+                            <!--商品重量-->
+                            <TextView
+                                android:id="@+id/tv_product_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="3"
+                                android:paddingBottom="5dp"
+                                android:paddingEnd="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingStart="15dp"
+                                android:text="重量:0.089kg"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="#F5F5F5" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="商品详情"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="产品介绍"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cpjs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/img_cpjs"
+                            android:layout_width="match_parent"
+                            android:layout_height="450dp"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="评价"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="当前评价总数 0"
+                            android:textSize="15sp" />
+
+                        <WebView
+                            android:id="@+id/product_webView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:ignore="WebViewLayout" />
+                        <!--只用于占位不显示-为浮动栏占位大小40dp跟浮动栏高度一致-->
+                        <TextView
+                            android:id="@+id/tv_show"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--中间浮动栏，同时设置到顶部距离为0，因为顶部有toolbar高度为50，所以设置layout_marginTop="50dp"-->
+                <LinearLayout
+                    android:id="@+id/layout_classify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:background="#99000000"
+                    android:orientation="vertical">
+
+                    <!--游标-->
+                    <ImageView
+                        android:id="@+id/cursor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorTitle"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </lqy.bwie.com.myappone.weight.MyScrollView>
+
+
+        <!--顶部tool-->
+        <RelativeLayout
+            android:id="@+id/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+
+            android:background="#99000000">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="#00ffffff"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                android:src="@mipmap/back_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/sp_20"
+                android:background="#00ffffff"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_info_imgtext"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00ffffff"
+                    android:gravity="center"
+                    android:text="@string/info_imgtext"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00ffffff"
+                    android:gravity="center"
+                    android:text="@string/info_photo"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_eval"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00ffffff"
+                    android:gravity="center"
+                    android:text="@string/info_eval"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_200"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:orientation="vertical">
+
+            <ImageView
+                android:background="@drawable/view_selector"
+                android:id="@+id/img_shopping_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:padding="7dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@mipmap/detail_car" />
+
+            <TextView
+                android:background="@drawable/view_selector"
+                android:id="@+id/tv_shopping_buy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:padding="@dimen/dp_10"
+                android:text="买" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
